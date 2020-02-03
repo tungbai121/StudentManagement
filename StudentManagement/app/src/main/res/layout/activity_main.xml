@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:stretchColumns="1"
+    tools:context=".activities.MainActivity">
+
+    <TableRow>
+        <TextView
+            android:layout_margin="20dp"
+            android:text="Đăng Nhập"
+            android:layout_span="2"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"/>
+    </TableRow>
+
+    <TableRow android:layout_margin="10dp">
+        <TextView
+            android:gravity="end"
+            android:text="Tên đăng nhập:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:hint="nhập tên đăng nhập"
+            android:inputType="text"
+            android:singleLine="true" />
+    </TableRow>
+
+    <TableRow android:layout_margin="10dp">
+        <TextView
+            android:gravity="end"
+            android:text="Mật khẩu:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:hint="nhập mật khẩu"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+    </TableRow>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:onClick="onButtonLoginClickListener"
+            android:text="Đăng nhập"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="70dp"
+            android:backgroundTint="#2196F3"
+            android:onClick="onButtonExitClickListener"
+            android:text="Thoát"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</TableLayout>
