@@ -1,2 +1,2 @@
 # StudentManagement
-Student Management System
+Student Management System (Android)
